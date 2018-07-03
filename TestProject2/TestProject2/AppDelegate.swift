@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TestProject
+//  TestProject2
 //
-//  Created by user on 2018. 6. 18..
-//  Copyright © 2018년 user. All rights reserved.
+//  Created by byung-soo kwon on 2018. 6. 18..
+//  Copyright © 2018년 ryan. All rights reserved.
 //
 
 import UIKit
