@@ -16,6 +16,7 @@
 		C884A4A420EF3D03007703B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C884A4A220EF3D03007703B7 /* Main.storyboard */; };
 		C884A4A920EF3D04007703B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C884A4A820EF3D04007703B7 /* Assets.xcassets */; };
 		C884A4AC20EF3D04007703B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C884A4AA20EF3D04007703B7 /* LaunchScreen.storyboard */; };
+		C8B127F020F04E96001BEBA3 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B127EF20F04E96001BEBA3 /* AlertViewController.swift */; };
 		C8D7928820EFB86A00621080 /* Diary+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D7928620EFB86A00621080 /* Diary+CoreDataClass.swift */; };
 		C8D7928920EFB86A00621080 /* Diary+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D7928720EFB86A00621080 /* Diary+CoreDataProperties.swift */; };
 		C8D7928B20EFBF5900621080 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D7928A20EFBF5900621080 /* CoreData.swift */; };
@@ -33,6 +34,7 @@
 		C884A4A820EF3D04007703B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C884A4AB20EF3D04007703B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C884A4AD20EF3D04007703B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8B127EF20F04E96001BEBA3 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		C8D7928620EFB86A00621080 /* Diary+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Diary+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C8D7928720EFB86A00621080 /* Diary+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Diary+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C8D7928A20EFBF5900621080 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				C84364A620EF608400ECB767 /* DetailViewController.swift */,
 				C84AF35320EF868A00F8070A /* AddViewController.swift */,
 				C8D7928A20EFBF5900621080 /* CoreData.swift */,
+				C8B127EF20F04E96001BEBA3 /* AlertViewController.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				C884A4A120EF3D03007703B7 /* ViewController.swift in Sources */,
 				C84AF35420EF868A00F8070A /* AddViewController.swift in Sources */,
 				C8D7928820EFB86A00621080 /* Diary+CoreDataClass.swift in Sources */,
+				C8B127F020F04E96001BEBA3 /* AlertViewController.swift in Sources */,
 				C84364A720EF608400ECB767 /* DetailViewController.swift in Sources */,
 				C8D7928B20EFBF5900621080 /* CoreData.swift in Sources */,
 				C84364A520EF53F800ECB767 /* ListViewController.swift in Sources */,

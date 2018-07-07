@@ -21,13 +21,10 @@ class AddViewController: UIViewController {
    
     
     @IBAction func addDiary(_ sender: UIButton) {
+        SaveData(id: 1, title: addTitle.text!,content:addContent.text!)
         
-        SaveData(id: 3, title: addTitle.text!,content:addContent.text!)
-//        let listView = storyboard?.instantiateViewController(withIdentifier:"listViewController") as? ListViewController
-//
-//        listView?.dataSet[(listView?.dataSet.count)!] = ["title": addTitle.text!, "content": addContent.text!]
-
-//        print(listView?.dataSet)
+        let listView = storyboard?.instantiateViewController(withIdentifier: "listViewController") as? ListViewController
+        self.show(listView!, sender: self)
     }
     
 }

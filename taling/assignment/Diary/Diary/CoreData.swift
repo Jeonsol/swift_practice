@@ -82,3 +82,29 @@ func getData () -> Array<Any> {
     }
     return dataSet
 }
+
+func deleteRecords(id: Int) -> Void {
+    let moc = getContext()
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Diary")
+    
+    let result = try? moc.fetch(fetchRequest)
+    let resultData = result as! [Diary]
+    
+    for object in resultData {
+        if let diaryId = object.value(forKey: "id") {
+            if diaryId as! Int == id {
+                moc.delete(object)
+            }
+        }
+    }
+    
+    do {
+        try moc.save()
+        print("saved!")
+    } catch let error as NSError  {
+        print("Could not save \(error), \(error.userInfo)")
+    } catch {
+        
+    }
+}
+

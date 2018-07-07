@@ -107,6 +107,16 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LVz-7y-2cc" id="Rc0-P1-eTu">
                                             <rect key="frame" x="0.0" y="0.0" width="315" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCW-Nj-IYb">
+                                                    <rect key="frame" x="256" y="6" width="43" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="delete"/>
+                                                    <connections>
+                                                        <action selector="deleteDiary:" destination="buB-Wt-NcU" eventType="touchUpInside" id="kkE-gN-M8p"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -176,6 +186,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Dq5-YJ-Fst" id="4Mm-Vt-Ypp"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="그림일기" translatesAutoresizingMaskIntoConstraints="NO" id="FEj-Yi-XcU">
                                 <rect key="frame" x="30" y="140" width="315" height="200"/>
@@ -191,6 +204,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Dq5-YJ-Fst" id="ozp-iE-58V"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqO-oB-tqp">
                                 <rect key="frame" x="30" y="597" width="315" height="40"/>
@@ -234,6 +250,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNf-4Y-PiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1584.8" y="799.2503748125938"/>
+        </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="cQW-cD-FAW">
+            <objects>
+                <viewController storyboardIdentifier="alertViewController" id="FYx-wH-5kY" customClass="AlertViewController" customModule="Diary" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eea-go-JCl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터가 삭제되었습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICJ-SY-vKn">
+                                <rect key="frame" x="104" y="282" width="167" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFk-mk-kRN">
+                                <rect key="frame" x="161" y="325" width="52" height="51"/>
+                                <state key="normal" title="돌아가기"/>
+                                <connections>
+                                    <action selector="returnList:" destination="FYx-wH-5kY" eventType="touchUpInside" id="J0i-zW-0Du"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ICJ-SY-vKn" firstAttribute="centerX" secondItem="qFk-mk-kRN" secondAttribute="centerX" id="4ll-rb-Piv"/>
+                            <constraint firstItem="Ecx-eR-PxX" firstAttribute="bottom" secondItem="qFk-mk-kRN" secondAttribute="bottom" constant="291" id="7hG-UJ-U73"/>
+                            <constraint firstItem="ICJ-SY-vKn" firstAttribute="top" secondItem="Ecx-eR-PxX" secondAttribute="top" constant="262" id="UPW-kR-MRu"/>
+                            <constraint firstItem="qFk-mk-kRN" firstAttribute="top" secondItem="ICJ-SY-vKn" secondAttribute="bottom" constant="22" id="Ylr-MV-m0g"/>
+                            <constraint firstItem="qFk-mk-kRN" firstAttribute="centerX" secondItem="Eea-go-JCl" secondAttribute="centerX" id="ffC-wL-jqh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ecx-eR-PxX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klg-x0-92H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2349.5999999999999" y="798.35082458770626"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Fpc-Q6-MV9">
