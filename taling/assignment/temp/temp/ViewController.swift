@@ -13,18 +13,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
-        let newUser = NSManagedObject(entity: entity!, insertInto: context)
-        newUser.setValue("Shashikant", forKey: "title")
-        newUser.setValue("1234", forKey: "content")
-        newUser.setValue("1", forKey: "id")
-        do {
-            try context.save()
-        } catch {
-            print("Failed saving")
-        }
     }
 
     override func didReceiveMemoryWarning() {
