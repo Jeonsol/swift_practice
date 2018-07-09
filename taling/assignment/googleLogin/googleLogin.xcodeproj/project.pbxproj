@@ -19,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		8ECF7B866F686B82B846E7E7 /* Pods_googleLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_googleLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84D863020F374FD00C6C351 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		C89AA2B620F26D10005D26E6 /* googleLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = googleLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89AA2B920F26D10005D26E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C89AA2BB20F26D10005D26E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 				C89AA2C520F26D11005D26E6 /* LaunchScreen.storyboard */,
 				C89AA2C820F26D11005D26E6 /* Info.plist */,
 				C89AA2C020F26D10005D26E6 /* googleLogin.xcdatamodeld */,
+				C84D863020F374FD00C6C351 /* Bridging-Header.h */,
 			);
 			path = googleLogin;
 			sourceTree = "<group>";
@@ -387,6 +389,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sol.googleLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "googleLogin/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -407,6 +410,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sol.googleLogin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "googleLogin/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -12,7 +12,9 @@ import GoogleSignIn
 
 class ViewController: UIViewController, GIDSignInUIDelegate {
 
-    @IBAction func signIn(_ sender: Any) {
+
+    
+    @IBAction func signInbutton(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
 
     }
@@ -20,6 +22,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         
         GIDSignIn.sharedInstance().uiDelegate = self
+
     }
 
     
