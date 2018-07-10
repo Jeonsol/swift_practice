@@ -47,5 +47,29 @@
             </objects>
             <point key="canvasLocation" x="128.80000000000001" y="129.98500749625188"/>
         </scene>
+        <!--After Login View Controller-->
+        <scene sceneID="YvA-JN-0BS">
+            <objects>
+                <viewController storyboardIdentifier="afterLoginViewController" id="0qV-rv-PPp" customClass="AfterLoginViewController" customModule="googleLogin" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gaw-hQ-8SJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="로그인 후 페이지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oap-8C-9hW">
+                                <rect key="frame" x="131" y="185" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HNG-Hh-HMH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARA-l5-Lup" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="130"/>
+        </scene>
     </scenes>
 </document>

@@ -49,7 +49,9 @@ class DetailViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        textField.text = diary.title
         textView.text = diary.body
+//       imageView.image = UIImage(data: Data as Data)
     }
     @objc func tapDismissKeyboard() {
         textView.endEditing(true)
@@ -64,7 +66,7 @@ extension DetailViewController: UIImagePickerControllerDelegate, UINavigationCon
         imageView.image = selectedImage
         
         dismiss(animated: true, completion: nil)
-        
+    
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
@@ -73,6 +75,7 @@ extension DetailViewController: UIImagePickerControllerDelegate, UINavigationCon
 
 extension DetailViewController: UITextViewDelegate {
     func textViewDidEndEditing(_ textView: UITextView) {
+        diary.title = textField.text
         diary.body = textView.text
         diary.saveData()
     }
