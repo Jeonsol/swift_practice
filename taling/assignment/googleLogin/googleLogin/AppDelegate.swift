@@ -55,8 +55,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 // ...
                 return
             }
-            // User is signed in
-            // ...
+           
+            let mainStoryBoard: UIStoryboard = UIStoryboard(name:"Main", bundle:nil)
+            let protectedPage = mainStoryBoard.instantiateViewController(withIdentifier: "afterLoginViewController") as! AfterLoginViewController
+            let appDelegate = UIApplication.shared.delegate
+            appDelegate?.window??.rootViewController = protectedPage
         }
         // ...
     }

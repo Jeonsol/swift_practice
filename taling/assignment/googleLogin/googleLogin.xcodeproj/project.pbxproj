@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B631B2B0E6C60F77AA7D572E /* Pods_googleLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECF7B866F686B82B846E7E7 /* Pods_googleLogin.framework */; };
+		C84D863620F4E81100C6C351 /* AfterLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D863520F4E81100C6C351 /* AfterLoginViewController.swift */; };
 		C89AA2BA20F26D10005D26E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89AA2B920F26D10005D26E6 /* AppDelegate.swift */; };
 		C89AA2BC20F26D10005D26E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89AA2BB20F26D10005D26E6 /* ViewController.swift */; };
 		C89AA2BF20F26D10005D26E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C89AA2BD20F26D10005D26E6 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		8ECF7B866F686B82B846E7E7 /* Pods_googleLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_googleLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84D863020F374FD00C6C351 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		C84D863520F4E81100C6C351 /* AfterLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginViewController.swift; sourceTree = "<group>"; };
 		C89AA2B620F26D10005D26E6 /* googleLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = googleLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C89AA2B920F26D10005D26E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C89AA2BB20F26D10005D26E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				C89AA2C820F26D11005D26E6 /* Info.plist */,
 				C89AA2C020F26D10005D26E6 /* googleLogin.xcdatamodeld */,
 				C84D863020F374FD00C6C351 /* Bridging-Header.h */,
+				C84D863520F4E81100C6C351 /* AfterLoginViewController.swift */,
 			);
 			path = googleLogin;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				C89AA2BC20F26D10005D26E6 /* ViewController.swift in Sources */,
 				C89AA2C220F26D10005D26E6 /* googleLogin.xcdatamodeld in Sources */,
 				C89AA2BA20F26D10005D26E6 /* AppDelegate.swift in Sources */,
+				C84D863620F4E81100C6C351 /* AfterLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

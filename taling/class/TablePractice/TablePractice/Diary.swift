@@ -13,6 +13,7 @@ class Diary: NSObject, NSCoding {
     var title : String?
     var body : String?
     var image : Data?
+    
     var archivePath = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!).appendingPathComponent("diary.component").path
     
     override init() {
@@ -33,7 +34,7 @@ class Diary: NSObject, NSCoding {
         aCoder.encode(body, forKey: "body")
         aCoder.encode(image, forKey: "image")
     }
-    
+
     func saveData() {
         let result = NSKeyedArchiver.archiveRootObject(self, toFile: archivePath)
         if !result {
@@ -46,7 +47,7 @@ class Diary: NSObject, NSCoding {
             title = diary.title
             body = diary.body
             image = diary.image
-            print("\(body)")
+            print("이미지경로는요\(body)")
         } else {
             print("언아카이빙 실패!")
         }
