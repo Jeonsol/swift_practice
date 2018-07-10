@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     @IBAction func clickLogin(_ sender: UIButton) {
         let listView = storyboard?.instantiateViewController(withIdentifier: "listViewController") as? ListViewController
-        self.show(listView!, sender: self)
+        present(listView!, animated: true)
 //        if emailText.text == "test" && passwordText.text == "1" {
 //            let listView = storyboard?.instantiateViewController(withIdentifier: "listViewController") as? ListViewController
 //            self.show(listView!, sender: self)

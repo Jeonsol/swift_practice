@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C84D863220F3864000C6C351 /* DiaryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D863120F3864000C6C351 /* DiaryStore.swift */; };
+		C84D863420F3867F00C6C351 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D863320F3867F00C6C351 /* Diary.swift */; };
 		C884A47C20EB9B4B007703B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C884A47B20EB9B4B007703B7 /* AppDelegate.swift */; };
 		C884A47E20EB9B4B007703B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C884A47D20EB9B4B007703B7 /* ViewController.swift */; };
 		C884A48120EB9B4B007703B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C884A47F20EB9B4B007703B7 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C84D863120F3864000C6C351 /* DiaryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryStore.swift; sourceTree = "<group>"; };
+		C84D863320F3867F00C6C351 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		C884A47820EB9B4B007703B7 /* TablePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TablePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C884A47B20EB9B4B007703B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C884A47D20EB9B4B007703B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				C884A48A20EB9B4C007703B7 /* Info.plist */,
 				C884A48220EB9B4B007703B7 /* TablePractice.xcdatamodeld */,
 				C884A49020EB9FA2007703B7 /* DetailViewController.swift */,
+				C84D863120F3864000C6C351 /* DiaryStore.swift */,
+				C84D863320F3867F00C6C351 /* Diary.swift */,
 			);
 			path = TablePractice;
 			sourceTree = "<group>";
@@ -142,9 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C884A48420EB9B4B007703B7 /* TablePractice.xcdatamodeld in Sources */,
+				C84D863220F3864000C6C351 /* DiaryStore.swift in Sources */,
 				C884A47E20EB9B4B007703B7 /* ViewController.swift in Sources */,
 				C884A47C20EB9B4B007703B7 /* AppDelegate.swift in Sources */,
 				C884A49120EB9FA2007703B7 /* DetailViewController.swift in Sources */,
+				C84D863420F3867F00C6C351 /* Diary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

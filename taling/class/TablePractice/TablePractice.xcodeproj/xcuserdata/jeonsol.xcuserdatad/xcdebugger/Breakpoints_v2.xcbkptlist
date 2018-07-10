@@ -9,12 +9,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Diary/ViewController.swift"
-            timestampString = "552833437.2188849"
+            filePath = "TablePractice/DiaryStore.swift"
+            timestampString = "552832403.781783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34">
+            startingLineNumber = "15"
+            endingLineNumber = "15">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
