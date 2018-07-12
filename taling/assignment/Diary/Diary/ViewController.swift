@@ -7,27 +7,26 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var googleButton: GIDSignInButton!
+    
+    @IBAction func clickLogin(_ sender: Any) {
+        let listView = storyboard?.instantiateViewController(withIdentifier: "listViewController") as? ListViewController
+        self.show(listView!, sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = loginButton.frame.height * 0.3 / 2
-    }
-    
-    @IBAction func clickLogin(_ sender: UIButton) {
-        let listView = storyboard?.instantiateViewController(withIdentifier: "listViewController") as? ListViewController
-        present(listView!, animated: true)
-//        if emailText.text == "test" && passwordText.text == "1" {
-//            let listView = storyboard?.instantiateViewController(withIdentifier: "listViewController") as? ListViewController
-//            self.show(listView!, sender: self)
-//        }
-//        else {
-//            print("로그인실패")
-//        }
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+        
     }
 }

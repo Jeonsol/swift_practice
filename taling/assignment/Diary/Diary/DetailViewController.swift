@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
         
         DiaryTitle.text = diaryTitle
         DiaryContent.text = diaryContent
+        
         // Do any additional setup after loading the view.
     }
 
