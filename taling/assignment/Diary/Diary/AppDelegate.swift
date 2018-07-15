@@ -34,10 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         // ...
-        if let error = error {
-            // ...
-            return
-        }
+//        if let error = error {
+//            // ...
+//            return
+//        }
         
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
@@ -45,10 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // ...
         
         Auth.auth().signIn(with: credential) { (user, error) in
-            if let error = error {
-                // ...
-                return
-            }
+//            if let error = error {
+//                // ...
+//                return
+//            }
             let mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let protectPage = mainStoryBoard.instantiateViewController(withIdentifier: "listViewController") as! ListViewController
             let appDelegate = UIApplication.shared.delegate

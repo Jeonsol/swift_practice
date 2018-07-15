@@ -34,11 +34,12 @@ class Diary : NSObject, NSCoding {
                 self.dataSet.append(data)
             }
         }
+        print(archivePath)
         return dataSet
     }
     
-    func saveData(_ title: String, _ content: String ) {
-        var newData = ["title": title, "content": content]
+    func saveData(_ title: String, _ content: String,_ imgData: Data) {
+        let newData = ["title": title, "content": content, "imgData": imgData] as [String : Any]
         dataSet.append(newData)
         let result = NSKeyedArchiver.archiveRootObject(dataSet, toFile: archivePath)
         if !result {

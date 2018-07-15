@@ -399,6 +399,7 @@
 			baseConfigurationReference = 7993A448002A3D9DEA51C021 /* Pods-Diary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWSQ59J724;
 				INFOPLIST_FILE = Diary/Info.plist;
@@ -420,6 +421,7 @@
 			baseConfigurationReference = 54BC582F2570A430E1CD7C44 /* Pods-Diary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CWSQ59J724;
 				INFOPLIST_FILE = Diary/Info.plist;

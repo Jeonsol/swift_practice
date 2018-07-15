@@ -55,6 +55,7 @@ extension ListViewController:UITableViewDelegate {
 
         detailView?.diaryTitle = diary.dataSet[indexPath.row]["title"] as! String
         detailView?.diaryContent = diary.dataSet[indexPath.row]["content"] as! String
+        detailView?.diaryImgUrl = diary.dataSet[indexPath.row]["imgData"] as! Data
         
         self.show(detailView!, sender: self)
         
