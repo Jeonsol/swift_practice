@@ -12,6 +12,8 @@
 		C84364A720EF608400ECB767 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84364A620EF608400ECB767 /* DetailViewController.swift */; };
 		C84AF35420EF868A00F8070A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84AF35320EF868A00F8070A /* AddViewController.swift */; };
 		C84AF37720EFA5AB00F8070A /* Diary.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = C84AF37620EFA5AB00F8070A /* Diary.xcdatamodel */; };
+		C8539EBD20FF48120078DD85 /* DiaryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8539EBC20FF48120078DD85 /* DiaryStore.swift */; };
+		C8539EBF20FF4CB50078DD85 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8539EBE20FF4CB50078DD85 /* Global.swift */; };
 		C884A49F20EF3D03007703B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C884A49E20EF3D03007703B7 /* AppDelegate.swift */; };
 		C884A4A120EF3D03007703B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C884A4A020EF3D03007703B7 /* ViewController.swift */; };
 		C884A4A420EF3D03007703B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C884A4A220EF3D03007703B7 /* Main.storyboard */; };
@@ -19,7 +21,6 @@
 		C898380320F6132F00CF9509 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C898380220F6132F00CF9509 /* GoogleService-Info.plist */; };
 		C898380620F61BFC00CF9509 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C898380520F61BFC00CF9509 /* Diary.swift */; };
 		C898380A20F708FB00CF9509 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C898380920F708FB00CF9509 /* Media.xcassets */; };
-		C8B127F020F04E96001BEBA3 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B127EF20F04E96001BEBA3 /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		C84364A620EF608400ECB767 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C84AF35320EF868A00F8070A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		C84AF37620EFA5AB00F8070A /* Diary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Diary.xcdatamodel; path = Diary.xcdatamodeld/Diary.xcdatamodel; sourceTree = "<group>"; };
+		C8539EBC20FF48120078DD85 /* DiaryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryStore.swift; sourceTree = "<group>"; };
+		C8539EBE20FF4CB50078DD85 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		C884A49B20EF3D03007703B7 /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C884A49E20EF3D03007703B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C884A4A020EF3D03007703B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +43,6 @@
 		C898380420F6163900CF9509 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		C898380520F61BFC00CF9509 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		C898380920F708FB00CF9509 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		C8B127EF20F04E96001BEBA3 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +105,11 @@
 				C84364A420EF53F800ECB767 /* ListViewController.swift */,
 				C84364A620EF608400ECB767 /* DetailViewController.swift */,
 				C84AF35320EF868A00F8070A /* AddViewController.swift */,
-				C8B127EF20F04E96001BEBA3 /* AlertViewController.swift */,
 				C898380420F6163900CF9509 /* Bridging-Header.h */,
 				C898380520F61BFC00CF9509 /* Diary.swift */,
 				C898380920F708FB00CF9509 /* Media.xcassets */,
+				C8539EBC20FF48120078DD85 /* DiaryStore.swift */,
+				C8539EBE20FF4CB50078DD85 /* Global.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -249,12 +252,13 @@
 			files = (
 				C884A4A120EF3D03007703B7 /* ViewController.swift in Sources */,
 				C84AF35420EF868A00F8070A /* AddViewController.swift in Sources */,
-				C8B127F020F04E96001BEBA3 /* AlertViewController.swift in Sources */,
 				C84364A720EF608400ECB767 /* DetailViewController.swift in Sources */,
 				C84364A520EF53F800ECB767 /* ListViewController.swift in Sources */,
 				C84AF37720EFA5AB00F8070A /* Diary.xcdatamodel in Sources */,
 				C884A49F20EF3D03007703B7 /* AppDelegate.swift in Sources */,
 				C898380620F61BFC00CF9509 /* Diary.swift in Sources */,
+				C8539EBF20FF4CB50078DD85 /* Global.swift in Sources */,
+				C8539EBD20FF48120078DD85 /* DiaryStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

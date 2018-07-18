@@ -85,7 +85,7 @@ class DetailViewController: UIViewController{
             return nil
             
         }
-        if titleText.isEmpty || bodyText.isEmpty {
+        if titleText.isEmpty || bodyText.isEmcopty {
             showAlert(title: "경고", message: "글ㅆㅓ용")
             return nil
         }

@@ -15,13 +15,25 @@ class AddViewController: UIViewController {
     @IBOutlet weak var addContent: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     
-    let imagePicker = UIImagePickerController()
-    var imgData : Data!
-    var dairy = Diary()
-    
     @IBAction func tabImage(_ sender: UITapGestureRecognizer) {
         present(imagePicker, animated: true, completion: nil)
     }
+    
+    @IBAction func addDiary(_ sender: UIButton) {
+        let listView = storyboard?.instantiateViewController(withIdentifier: "listViewController") as? ListViewController
+        guard let diary = makeDiary() else {return}
+        if let indexPath = indexPath {
+            diaryStore.diaries[indexPath.row] = diary
+        }
+        else {
+            diaryStore.addDiary(diary)
+        }
+        self.show(listView!, sender: self)
+    }
+    
+    let imagePicker = UIImagePickerController()
+    let diaryStore = Global.shared.diaryStore
+    var indexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,24 +50,37 @@ class AddViewController: UIViewController {
         addContent.inputAccessoryView = toolBar
     }
     
-    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        if let error = error {
-            // we got back an error!
-            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true)
-        } else {
-            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            present(ac, animated: true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let indexPath = indexPath {
+            let diary = diaryStore.diaries[indexPath.row]
+            addTitle.text = diary.title
+            addContent.text = diary.content
+            imageView.image = UIImage(data: diary.image!)
         }
     }
     
-    @IBAction func addDiary(_ sender: UIButton) {
-        dairy.saveData(addTitle.text!,addContent.text!, imgData)
-        UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-        let listView = storyboard?.instantiateViewController(withIdentifier: "listViewController") as? ListViewController
-        self.show(listView!, sender: self)
+    func makeDiary() -> Diary? {
+        guard let title = addTitle.text else { return nil}
+        guard let content = addContent.text else { return nil}
+        guard let image = imageView.image else {
+            showAlert(title: "경고", message: "이미지가 필요합니다.")
+            return nil
+        }
+        guard let imageData = UIImagePNGRepresentation(image) else {return nil}
+        
+        if title.isEmpty || content.isEmpty {
+            showAlert(title: "경고", message: "텍스트가 필요합니다.")
+            return nil
+        }
+
+        return Diary(title: title, content: content, image: imageData)
+    }
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        present(alertController, animated: true, completion: nil)
+        let okAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alertController.addAction(okAction)
     }
     
     @objc func tapDismissKeyboard() {
@@ -69,20 +94,7 @@ extension AddViewController: UIImagePickerControllerDelegate, UINavigationContro
         let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
         
         imageView.image = selectedImage
-        
-//        if let imgUrl = info[UIImagePickerControllerImageURL] as? URL{
-//            let imgName = imgUrl.lastPathComponent
-//            var documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-//            let localPath = documentDirectory?.appending(imgName)
-//            
-//            photoURL = localPath
-//        }
-        
-        let saveImage = UIImagePNGRepresentation(selectedImage!) as NSData?
-        imgData = saveImage as! Data
-        
         dismiss(animated: true, completion: nil)
-        
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)

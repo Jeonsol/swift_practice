@@ -11,7 +11,6 @@ import Firebase
 import GoogleSignIn
 
 class ViewController: UIViewController, GIDSignInUIDelegate {
-
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
@@ -27,6 +26,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         loginButton.layer.cornerRadius = loginButton.frame.height * 0.3 / 2
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
-        
     }
+    
 }

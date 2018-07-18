@@ -9,41 +9,25 @@
 import Foundation
 
 class Diary : NSObject, NSCoding {
-
-    override init() {
-        super.init()
-        self.dataSet = getData()
-    }
+    var title: String?
+    var content: String?
+    var image: Data?
     
-    func encode(with aCoder: NSCoder) {
-        // dataSet 인코드 구간
+    init(title: String, content: String, image: Data) {
+        self.title = title
+        self.content = content
+        self.image = image
     }
     
     required init?(coder aDecoder: NSCoder) {
-        // dataSet 디코드 구간
+        self.title = aDecoder.decodeObject(forKey: "title") as? String
+        self.content = aDecoder.decodeObject(forKey: "content") as? String
+        self.image = aDecoder.decodeObject(forKey: "image") as? Data
     }
-    
-    
-    var archivePath = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!).appendingPathComponent("diary.component").path
-    
-    var dataSet : [Dictionary<String, Any>] = []
-    
-    func getData() -> [Dictionary<String, Any>] {
-        if let diary = NSKeyedUnarchiver.unarchiveObject(withFile: archivePath) as? [Dictionary<String, Any>] {
-            for data in diary {
-                self.dataSet.append(data)
-            }
-        }
-        print(archivePath)
-        return dataSet
-    }
-    
-    func saveData(_ title: String, _ content: String,_ imgData: Data) {
-        let newData = ["title": title, "content": content, "imgData": imgData] as [String : Any]
-        dataSet.append(newData)
-        let result = NSKeyedArchiver.archiveRootObject(dataSet, toFile: archivePath)
-        if !result {
-            print("아카이브 실패!")
-        }
+
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(title, forKey: "title")
+        aCoder.encode(content, forKey: "content")
+        aCoder.encode(image, forKey: "image")
     }
 }
