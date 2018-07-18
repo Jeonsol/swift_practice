@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TablePractice" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,7 +41,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iDw-8U-Rjx"/>
+                    <navigationItem key="navigationItem" title="Title" id="eTB-Ot-rAj">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="QDp-WA-aey">
+                            <connections>
+                                <segue destination="JDu-ye-nFY" kind="presentation" id="cTZ-02-11H"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="2qq-9R-cld" id="i4t-u7-uBi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,7 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hz5-6P-ANP">
-                                <rect key="frame" x="67" y="51" width="240" height="240"/>
+                                <rect key="frame" x="67" y="74" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
@@ -65,7 +74,7 @@
                                 </connections>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oLS-4B-yB9">
-                                <rect key="frame" x="67" y="385" width="240" height="128"/>
+                                <rect key="frame" x="67" y="408" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -75,16 +84,8 @@
                                     <outlet property="delegate" destination="JDu-ye-nFY" id="X7D-xm-v8E"/>
                                 </connections>
                             </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b13-2S-hTU">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem systemItem="flexibleSpace" id="kMo-t0-6d6"/>
-                                    <barButtonItem systemItem="done" id="0nj-9C-mGF"/>
-                                </items>
-                            </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JB3-AS-eWg">
-                                <rect key="frame" x="77" y="318" width="220" height="30"/>
+                                <rect key="frame" x="77" y="341" width="220" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -93,11 +94,21 @@
                                     <outlet property="delegate" destination="JDu-ye-nFY" id="tCO-vd-jsJ"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slq-1J-AJp">
+                                <rect key="frame" x="293" y="36" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="done"/>
+                                <connections>
+                                    <action selector="addDiary:" destination="JDu-ye-nFY" eventType="touchUpInside" id="86g-ec-aAe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MI9-0A-Mh3"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jt7-1R-sp6"/>
+                    <navigationItem key="navigationItem" id="jt7-1R-sp6">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="aqQ-zz-kxx"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="Hz5-6P-ANP" id="zJN-Yq-A0q"/>
                         <outlet property="textField" destination="JB3-AS-eWg" id="SnW-zU-HRS"/>
