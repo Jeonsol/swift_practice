@@ -22,7 +22,6 @@ class DetailViewController: UIViewController{
     
     
     @IBAction func tabImage(_ sender: UITapGestureRecognizer) {
-        
         present(imagePicker, animated: true, completion: nil)
         
     }
@@ -104,7 +103,6 @@ class DetailViewController: UIViewController{
 
 extension DetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        // 이미지 클릭했을시
         
         let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage
         imageView.image = selectedImage
